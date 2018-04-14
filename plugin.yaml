@@ -1,0 +1,6 @@
+name: "starter"
+version: "0.1.0"
+usage: Manage your Helm "starter" blueprints
+description: |-
+  Manage your Helm "starter" blueprints
+command: "$HELM_PLUGIN_DIR/src/main.sh"
