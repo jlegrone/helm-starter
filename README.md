@@ -1,24 +1,36 @@
 # helm-starter
 
-Manage your Helm "starter" blueprints.
+A [Helm starter](https://docs.helm.sh/developing_charts/#chart-starter-packs) is a blueprint that can be used when creating a new chart.
 
-## Install
+Starters themselves are helm charts. Some examples are available here:
+
+https://github.com/jlegrone/helm-blueprints
+
+## Getting Started
+
+Install the plugin:
 
 ```bash
 helm plugin install https://github.com/jlegrone/helm-starter.git
 ```
 
-## Usage
-
-A helm starter is a blueprint for creating a new chart. Starters themselves are helm charts; some examples are available here:
-
-https://github.com/jlegrone/helm-blueprints
+Optionally, add a Helm repository containing starter charts:
 
 ```bash
-# Add a helm repository containing starter charts
 helm repo add blueprints https://jlegrone.github.io/helm-blueprints
-# Install a starter chart
-helm starter install blueprints/openshift
-# Create a new chart "mychart" with the "openshift" starter chart
-helm create mychart --starter openshift
+```
+
+## Usage
+
+Create a new chart from an existing template:
+
+```bash
+# Create a new chart "mychart" with the "blueprints/statefulset" starter chart
+helm starter create-from blueprints/statefulset mychart
+```
+
+View other commands and usage instructions:
+
+```bash
+helm starter help
 ```

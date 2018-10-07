@@ -1,5 +1,5 @@
-name: "starter"
-version: "0.1.0"
+name: starter
+version: "0.2.0"
 usage: Manage your Helm "starter" blueprints
 description: |-
   Manage your Helm "starter" blueprints

@@ -1,8 +1,11 @@
 #!/bin/bash
 
 add() {
+  echo "Adding \"$1\" starter..."
+
   local repo=${1%/*}
   $HELM_BIN fetch --untar --destination "$HELM_HOME/starters/$repo" "$1" "${@:2}" &&
+
   echo """Starter \"$1\" added successfully.
 
 You can now create a new chart using this template:

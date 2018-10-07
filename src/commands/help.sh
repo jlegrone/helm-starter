@@ -1,7 +1,7 @@
 #!/bin/bash
 
 help() {
-cat << EOF
+  cat << EOF
 Manage your Helm "starter" blueprints.
 
 A helm starter is a blueprint for creating a new chart.
@@ -11,9 +11,10 @@ available here:
 https://github.com/jlegrone/helm-blueprints
 
 Usage:
-  helm starter add [CHART] <flags>
+  helm starter add [STARTER_CHART] <flags>
   helm starter list
-  helm starter remove [CHART]
+  helm starter remove [STARTER_CHART]
+  helm starter create-from [STARTER_CHART] [NEW_CHART]
 
 Example:
   helm repo add blueprints https://jlegrone.github.io/helm-blueprints
@@ -21,8 +22,9 @@ Example:
   helm create mychart --starter blueprints/openshift
 
 Available Commands:
-  add         add a Helm starter
-  list        list installed Helm starters
-  remove      remove a Helm starter
+  add          add a Helm starter
+  list         list installed Helm starters
+  remove       remove a Helm starter
+  create-from  create a chart using another chart as a template
 EOF
 }
